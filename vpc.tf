@@ -1,5 +1,5 @@
 resource "aws_subnet" "example" {
-  count = 5
+  count = dev
   availability_zone = ap-south-1-a[count.index]
   cidr_block        = cidrsubnet(aws_vpc.example.cidr_block, 8, count.index)
   vpc_id            = aws_vpc.main.id
