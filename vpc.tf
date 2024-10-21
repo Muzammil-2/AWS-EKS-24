@@ -41,7 +41,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
 resource "aws_launch_template" "eks_node_group_template" {
   name          = "eks-node-group-template"
   image_id      = "ami-0c55b159cbfafe1f0"  # Amazon Linux 2 EKS AMI ID, replace with the correct AMI
-  instance_type = "t2.medium"  # Set your instance type
+  instance_type = "t3.medium"  # Set your instance type
 
   network_interfaces {
     associate_public_ip_address = true
